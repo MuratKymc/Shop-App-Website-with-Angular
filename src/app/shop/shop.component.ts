@@ -15,6 +15,8 @@ import { Category } from "../model/category.model";
 export class ShopComponent{
 
     public selectedCategory: Category= null;
+    public productPerPage = 3;
+    public selectedPage =2;
 
     constructor(
         private productRepository: ProductRepository,
@@ -23,7 +25,14 @@ export class ShopComponent{
 
 
     get products(): Product[]{
-        return this.productRepository.getProducts(this.selectedCategory);
+        let index = (this.selectedPage - 1 ) * this.productPerPage;
+
+
+        return this.productRepository
+                .getProducts(this.selectedCategory)
+                .slice(index, index + this.productPerPage);
+
+
     }
 
 

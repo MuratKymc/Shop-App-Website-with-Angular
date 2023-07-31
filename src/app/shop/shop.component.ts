@@ -14,7 +14,7 @@ import { Category } from "../model/category.model";
 
 export class ShopComponent{
 
-    public selectedCategory: any= null;
+    public selectedCategory: Category= null;
 
     constructor(
         private productRepository: ProductRepository,

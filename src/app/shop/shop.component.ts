@@ -3,6 +3,7 @@ import { ProductRepository } from "../model/product.repository";
 import { CategoryRepository } from "../model/category.repository";
 import { Product } from "../model/product.model";
 import { Category } from "../model/category.model";
+import { Cart } from "../model/cart.model";
 
 @Component({
     selector: 'shop',
@@ -21,7 +22,8 @@ export class ShopComponent {
 
     constructor(
         private productRepository: ProductRepository,
-        private categoryRepository: CategoryRepository
+        private categoryRepository: CategoryRepository,
+        private cart: Cart
     ) { }
 
 
@@ -59,4 +61,8 @@ export class ShopComponent {
         this.selectedCategory = newCategory;
     }
 
+
+    addProductToCart(product: Product) {
+        this.cart.addItem(product);
+    }
 }

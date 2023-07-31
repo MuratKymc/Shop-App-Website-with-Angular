@@ -19,7 +19,7 @@ export class CategoryRepository implements OnInit {
     }
 
     getCategory(id: number): Category {
-        return this.categories.find(i => i.id === id);
+        return <Category>this.categories.find(i => i.id === id);
     }
 
 

@@ -24,7 +24,7 @@
                         {{ products.length }} tane ürün bulundu.
                     </div>
                 </div>
-                <ng-container *ngFor="let p of products">
+                <ng-container *ngFor= "let p of products">
                     <div class="col-md-4">
                         <div class="card mb-3">
                             <img src="/assets/img/{{p.imageUrl}}" alt="{{p.name}}">
@@ -41,7 +41,7 @@
 
                             <div class="card-footer text-center">
                                 <button class="btn btn-outline-primary btn-sm">Details</button>
-                                <button (click)="addProductToCart(p)" class="btn btn-outline-primary btn-sm ml-3">Add To Cart</button>
+                                <button (click)= "addProductToCart(p)" class="btn btn-outline-primary btn-sm ml-3">Add To Cart</button>
 
                             </div>
 

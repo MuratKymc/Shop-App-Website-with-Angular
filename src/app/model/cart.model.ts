@@ -10,7 +10,7 @@ export class Cart {
     public total: number = 0;
 
 
-    addItem(product: Product, quantity: number = 0){
+    addItem(product: Product, quantity: number = 1){
         let item = this.items.find(i=> i.product.id == product.id);
         if(item !=undefined){
             item.quantity += quantity;

@@ -11,20 +11,37 @@ import { Product } from 'src/app/model/product.model';
 export class ProductListComponent implements OnInit {
 
 
-  @Input() products: Product[] =[]; 
-  constructor(
-        private cart: Cart,
-        private router: Router
-  ){}
+  @Input() products: Product[] = [];
 
-  ngOnInit(){
+  selectedProduct: Product = null;
+
+
+
+  constructor(
+    private cart: Cart,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
 
   }
 
-  
+
   addProductToCart(product: Product) {
     this.cart.addItem(product);
     this.router.navigateByUrl('/cart');
-}
+  }
+
+
+  displayDetails(product: Product) {
+     this.selectedProduct = product;
+
+  }
+
+
+  hideDetails(){
+    this.selectedProduct = null;
+  }
+
 
 }

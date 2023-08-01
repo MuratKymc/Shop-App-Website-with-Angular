@@ -1,13 +1,13 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { Product } from './product.model';
-import { Observable, map } from 'rxjs';
 import { Category } from './category.model';
 import { Order } from './order.model';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class RestService {
-
 
   baseUrl: string = "http://localhost:3500/";
   token: string;
@@ -22,7 +22,6 @@ export class RestService {
     return this.http.get<Category[]>(this.baseUrl + 'categories');
   }
 
-
   saveOrder(order: Order): Observable<Order> {
     return this.http.post<Order>(this.baseUrl + 'orders', order);
   }
@@ -35,7 +34,6 @@ export class RestService {
       this.token = response.success ? response.token : null;
       console.log(this.token);
       return response.success;
-
     }));
   }
 

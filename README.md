@@ -29,24 +29,24 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Example Images
 
-##Shop Page
+## Shop Page
 
 ![shop1](https://github.com/MuratKymc/Shop-App-Website-with-Angular/assets/99142274/13a8f1c4-3d8a-4616-8982-46cc2e99dee7)
 
 ![shop2](https://github.com/MuratKymc/Shop-App-Website-with-Angular/assets/99142274/df23824e-80d9-414d-bef9-c751182085ff)
 
 
-##Cart Page
+## Cart Page
 
 ![cart](https://github.com/MuratKymc/Shop-App-Website-with-Angular/assets/99142274/5fe57e61-aea8-4fe6-9db1-01285643ca1f)
 
 
-##Admin Login Page
+## Admin Login Page
 
 ![admin login](https://github.com/MuratKymc/Shop-App-Website-with-Angular/assets/99142274/9e66b66d-4e47-47d0-a484-916cf7368a2d)
 
 
-##Admin Panel 
+## Admin Panel 
 
 ![admin panel products](https://github.com/MuratKymc/Shop-App-Website-with-Angular/assets/99142274/d8849b9b-c97f-4055-af5f-5488292442f1)
 
